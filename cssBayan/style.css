@@ -1,20 +1,55 @@
 .bayan {
     max-width: 500px;
     margin: 20px auto;
+    cursor: pointer;
 }
 
 .bayan-item {
     border-top: 2px solid lightgray;
+    margin: 10px 0;
 }
 
 .bayan-title {
     display: block;
     padding: 10px;
     cursor: pointer;
+    position: relative;
+    transition: color .5s ease-out;
 }
 
-.bayan:hover .bayan-title {
+.bayan-title>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bayan-input:not(:checked)~.bayan-title {
     color: blue;
+}
+
+ .bayan:hover .bayan-input:not(:checked)~.bayan-title {
+    color: black;
+}
+
+.bayan:hover .bayan-input:not(:checked)~.bayan-title:after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    font-weight: 900;
+    color: black;
+}
+
+.bayan:hover .bayan-input:checked~.bayan-title:after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    font-size: 36px;
+    font-weight: 900;
+    color: black;
 }
 
 .bayan-input {
