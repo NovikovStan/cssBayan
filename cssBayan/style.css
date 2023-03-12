@@ -1,3 +1,32 @@
-* {
-    
+.bayan {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.bayan-item {
+    border-top: 2px solid lightgray;
+}
+
+.bayan-title {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.bayan:hover .bayan-title {
+    color: blue;
+}
+
+.bayan-input {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.bayan-input:checked~.bayan-content {
+    display: block;
+}
+
+.bayan-content {
+    display: none;
 }
