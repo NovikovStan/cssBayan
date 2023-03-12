@@ -1,3 +1,7 @@
+body {
+    background-color: bisque;
+}
+
 .bayan {
     max-width: 500px;
     margin: 20px auto;
@@ -7,6 +11,7 @@
 .bayan-item {
     border-top: 2px solid lightgray;
     margin: 10px 0;
+    position: relative;
 }
 
 .bayan-title {
@@ -61,6 +66,7 @@
 .bayan-content>img {
     width: 100%;
     height: 100%;
+    border: 2px solid lightgray;
 }
 
 
@@ -78,6 +84,23 @@
     width: 0;
     height: 0;
     transition: width 1s, height 1s;
-    background-color: blue;
     margin: 0 auto;
+}
+
+.bayan:hover .bayan-item:active>.bayan-title {
+    color: blue;
+}
+
+.bayan:hover .bayan-item:active>.bayan-title::after {
+    color: blue;
+}
+
+.bayan:hover .bayan-item:active>.bayan-content::after {
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
