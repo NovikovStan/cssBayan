@@ -58,14 +58,21 @@
     position: absolute;
 }
 
+
 .bayan-input:checked~.bayan-content {
-    display: block;
+    width: 200px;
+    height: 200px;
 }
 
-.bayan-input:hover~.bayan-content {
-    display: block;
+.bayan-item:hover>.bayan-input:not(:checked)~.bayan-content {
+    width: 200px;
+    height: 200px;
 }
 
 .bayan-content {
-    display: none;
+    width: 0;
+    height: 0;
+    transition: width 1s, height 1s;
+    background-color: blue;
+    margin: 0 auto;
 }
